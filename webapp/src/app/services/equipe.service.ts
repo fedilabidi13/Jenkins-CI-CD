@@ -7,7 +7,7 @@ import { Equipe } from '../models/Equipe';
   providedIn: 'root'
 })
 export class EquipeService {
-  private baseUrl = 'http://localhost:8089/Kaddem/equipe';
+  private baseUrl = process.env['BASE_URL'] || 'http://localhost:8089/Kaddem/equipe';
 
   constructor(private http: HttpClient) { }
 
