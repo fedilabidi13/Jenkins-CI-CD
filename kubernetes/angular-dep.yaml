@@ -17,11 +17,4 @@ spec:
           image: fedilabidi13/khaddem-frontend:latest
           ports:
             - containerPort: 80
-          env:
-            - name: API_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: app-config
-                  key: API_URL
-         
-            
+          
