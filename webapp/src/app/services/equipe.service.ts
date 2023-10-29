@@ -7,9 +7,12 @@ import { Equipe } from '../models/Equipe';
   providedIn: 'root'
 })
 export class EquipeService {
-  private baseUrl = process.env['BASE_URL'] || 'http://localhost:8089/Kaddem/equipe';
+  baseUrl !: string;
 
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient) { 
+    this.baseUrl = 'http://spring-boot-service:8080';
+  }
 
 
   getEquipes(): Observable<Equipe[]> {
