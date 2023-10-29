@@ -11,7 +11,7 @@ export class EquipeService {
 
 
   constructor(private http: HttpClient) { 
-    this.baseUrl = 'http://spring-boot-service:8080';
+    this.baseUrl = 'http://spring-boot-service:8089';
   }
 
 
