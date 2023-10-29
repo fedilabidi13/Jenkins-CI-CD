@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: khaddem-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: khaddem-frontend
+  template:
+    metadata:
+      labels:
+        app: khaddem-frontend
+    spec:
+      containers:
+        - name: khaddem-frontend
+          image: fedilabidi13/khaddem-frontend:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: API_URL
+         
+            
