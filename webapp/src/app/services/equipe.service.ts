@@ -7,11 +7,10 @@ import { Equipe } from '../models/Equipe';
   providedIn: 'root'
 })
 export class EquipeService {
-  baseUrl !: string;
+  baseUrl: string = process['env']['API_URL'] || 'http://localhost:8089';
 
 
   constructor(private http: HttpClient) { 
-    this.baseUrl = 'http://spring-boot-service:8089';
   }
 
 
