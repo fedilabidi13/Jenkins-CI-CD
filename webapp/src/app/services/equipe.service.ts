@@ -7,7 +7,7 @@ import { Equipe } from '../models/Equipe';
   providedIn: 'root'
 })
 export class EquipeService {
-  baseUrl: string = 'http://10.0.134.221';
+  baseUrl: string = 'http://10.0.134.221:8089';
 
 
   constructor(private http: HttpClient) { 
