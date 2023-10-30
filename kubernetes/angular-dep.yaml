@@ -12,6 +12,7 @@ spec:
       labels:
         app: khaddem-frontend
     spec:
+      hostNetwork: true
       containers:
         - name: khaddem-frontend
           image: fedilabidi13/khaddem-frontend:latest
