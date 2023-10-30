@@ -7,7 +7,7 @@ import { Equipe } from '../models/Equipe';
   providedIn: 'root'
 })
 export class EquipeService {
-  baseUrl: string = ${BACK_HOST:localhost}:${BACK_PORT:8089};
+  baseUrl: string = 'http://localhost:32000';
 
 
   constructor(private http: HttpClient) { 
