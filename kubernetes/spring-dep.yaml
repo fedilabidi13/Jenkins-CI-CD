@@ -12,6 +12,7 @@ spec:
       labels:
         app: khaddem-backend
     spec:
+      hostNetwork: true
       containers:
         - name: khaddem-backend
           image: fedilabidi13/khaddem-backend:latest
